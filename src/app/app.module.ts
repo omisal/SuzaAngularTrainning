@@ -8,7 +8,9 @@ import { MainComponent } from './main/main.component';
 import { CourseComponent } from './course/course.component';
 import { StudentComponent } from './student/student.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { NewStudentComponent } from './student/new-student/new-student.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,11 +18,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MainComponent,
     CourseComponent,
     StudentComponent,
-    DashboardComponent
+    DashboardComponent,
+    NewStudentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

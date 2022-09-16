@@ -4,15 +4,19 @@ import { CourseComponent } from './course/course.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
+import { NewStudentComponent } from './student/new-student/new-student.component';
 import { StudentComponent } from './student/student.component';
 
 const routes: Routes = [
-  {path:"",component:LoginComponent},
-  {path:"main",component:MainComponent,children:[
-    {path:"",component:DashboardComponent},
-    {path:"student",component:StudentComponent},
-    {path:"course",component:CourseComponent},
-  ]}
+  { path: "", component: LoginComponent },
+  {
+    path: "main", component: MainComponent, children: [
+      { path: "", component: DashboardComponent },
+      { path: "student", component: StudentComponent },
+      { path: "new_student", component: NewStudentComponent },
+      { path: "course", component: CourseComponent },
+    ]
+  }
 ];
 
 @NgModule({

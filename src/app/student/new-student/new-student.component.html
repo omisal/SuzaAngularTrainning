@@ -1,0 +1,22 @@
+<div class="text-center">
+    <main class="form-signin">
+        <form [formGroup]="myForm" (ngSubmit)="saveStudent()">
+            <img class="mb-4" src="assets/bootstrap-logo.svg" alt="" width="72" height="57">
+
+            <div class="form-floating">
+                <input type="text" formControlName="studentName" class="form-control" placeholder="Student Name">
+                <label>Student Name</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" formControlName="address" class="form-control" placeholder="Student Address">
+                <label>Student Address</label>
+            </div>
+            <div class="form-floating">
+                <input type="number" formControlName="age" class="form-control" placeholder="Age">
+                <label>Age</label>
+            </div>
+
+            <button [disabled]="myForm.invalid" class="w-100 btn btn-lg btn-primary">SAVE STUDENT</button>
+        </form>
+    </main>
+</div>
